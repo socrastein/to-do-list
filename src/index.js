@@ -10,7 +10,7 @@ import "./style.css";
 import loadFooter from "./components/footer/footer";
 import loadNavBar from "./components/navbar/navBar";
 import onResize from "./components/navbar/navBarResize";
-
+import { mobileMenuHide, mobileMenuShow } from "./components/navbar/toggleMenu";
 
 // CONSTANT ELEMENTS
 

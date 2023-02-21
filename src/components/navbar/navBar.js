@@ -1,7 +1,7 @@
 import menuSVG from "./menu.svg";
 // import siteLogo from "./logo.svg";
 
-import toggleMenu from "./toggleMenu";
+import { mobileMenuHide, mobileMenuShow } from "./toggleMenu";
 
 export default function loadNavBar() {
   let mainContainer = document.getElementById("mainContainer");
@@ -22,12 +22,12 @@ export default function loadNavBar() {
 
   let siteName = document.createElement("p");
   siteName.id = "siteName";
-  siteName.textContent = "NAME OF SITE/APP"; //TODO: Rename this
+  siteName.textContent = "Recipe Box";
   siteTitle.appendChild(siteName);
 
   let menuBar = document.createElement("div");
   menuBar.id = "menuBar";
-  menuBar.classList.add("flexRow")
+  menuBar.classList.add("flexRow");
   navContainer.appendChild(menuBar);
 
   let menuItems = [
@@ -36,7 +36,7 @@ export default function loadNavBar() {
     { name: "ITEM 3", onClick: "function3()" },
   ];
 
-  menuItems.forEach((item) =>{
+  menuItems.forEach((item) => {
     let menuItem = document.createElement("p");
     menuItem.textContent = item.name;
     menuItem.onclick = item.onClick;
@@ -47,6 +47,6 @@ export default function loadNavBar() {
   let menuIcon = document.createElement("img");
   menuIcon.src = menuSVG;
   menuIcon.id = "menuIcon";
-  menuIcon.onclick = toggleMenu;
+  menuIcon.onclick = mobileMenuShow;
   navContainer.appendChild(menuIcon);
 }
