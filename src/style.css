@@ -5,6 +5,10 @@
   box-sizing: border-box;
   margin: 0;
 }
+
+html {
+  padding: 0;
+}
 /*            */
 /* ANIMATIONS */
 /*           */
@@ -45,16 +49,6 @@
   justify-content: center;
 }
 
-.left {
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.right {
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-
 .spacedEvenly {
   justify-content: space-evenly;
 }
@@ -87,7 +81,7 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 2rem 0 0;
 }
 
 #siteTitle {
@@ -97,13 +91,15 @@
 }
 
 #siteName {
+  margin-left: 2rem;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 #menuBar {
   gap: 2rem;
-  padding: 1rem;
+  padding: 1rem 0;
+  top: 0px;
 }
 
 .menuItem {

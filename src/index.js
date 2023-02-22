@@ -13,6 +13,7 @@ import onResize from "./components/navbar/navBarResize";
 import { mobileMenuHide, mobileMenuShow } from "./components/navbar/toggleMenu";
 
 // CONSTANT ELEMENTS
+const mainContainer = document.getElementById("mainContainer");
 
 // EVENT LISTENERS
 // For displaying mobile menu when screen < 500px wide
@@ -25,3 +26,6 @@ loadNavBar();
 onResize();
 
 loadFooter();
+
+// CONSTANT ELEMENTS (created by loading functions)
+
