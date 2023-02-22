@@ -11,6 +11,8 @@ import loadFooter from "./components/footer/footer";
 import loadNavBar from "./components/navbar/navBar";
 import onResize from "./components/navbar/navBarResize";
 import { mobileMenuHide, mobileMenuShow } from "./components/navbar/toggleMenu";
+import { loadRecipeEditor, showRecipeEditor } from "./components/mainDisplay/recipeEditor";
+
 
 // CONSTANT ELEMENTS
 const mainContainer = document.getElementById("mainContainer");
@@ -24,6 +26,8 @@ console.log("Testing");
 
 loadNavBar();
 onResize();
+
+loadRecipeEditor();
 
 loadFooter();
 

@@ -1,3 +1,5 @@
+import { showRecipeEditor } from "../mainDisplay/recipeEditor";
+
 export function recipeStore(recipe){
   let key = `${recipe.category}-${recipe.name}`
   let valueArray = [];
@@ -27,6 +29,12 @@ export function recipeDelete(recipe){
     localStorage.removeItem(key);
     console.log("Recipe removed");
   } else console.warn("Recipe not found in storage");
+}
+
+export function recipeEdit(recipe){
+  let key = `${recipe.category}-${recipe.name}`
+  showRecipeEditor(recipe);
+  // Fill in values for recipeEditorForm
 }
 
 
